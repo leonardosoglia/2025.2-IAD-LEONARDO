@@ -1,0 +1,30 @@
+def computarNota(pontuacao):
+    if pontuacao < 0 or pontuacao > 1:
+        return "Pontuação Inválida"
+    elif pontuacao >= 0.9:
+        return "A"
+    elif pontuacao >= 0.8:
+        return "B"
+    elif pontuacao >= 0.7:
+        return "C"
+    elif pontuacao >= 0.6:
+        return "D"
+    else:
+        return "F"
+
+# Programa principal
+while True:
+    entrada = input("Insira a pontuação: ")
+
+    # Permitir sair
+    if entrada.lower() in ["sair", "exit", "q"]:
+        break
+
+    try:
+        pont = float(entrada)
+    except:
+        print("Pontuação Inválida")
+        continue
+
+    nota = computarNota(pont)
+    print(nota)

@@ -1,0 +1,13 @@
+#[Exercício 4: Qual a finalidade da palavra-chave “def” em Python
+ #a) É uma gíria que significa “o código a seguir é muito maneiro”
+ #b) Ela indica o início de uma função
+ #c) Ela indica que a próxima seção endentada do código será guardada para
+ #mais tarde
+ #d) b e c são verdade
+# e) Nenhuma das opções anteriores
+
+### d) b e c são verdade b) Ela indica o início de uma função — Verdadeiro.
+#Em Python, def inicia a definição de uma função.
+
+#c) Ela indica que a próxima seção indentada do código será guardada para mais tarde — Verdadeiro.
+#Tudo que vier indentado após def é o corpo da função, que só será executado quando a função for chamada.
