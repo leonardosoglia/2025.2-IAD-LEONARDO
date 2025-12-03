@@ -1,0 +1,8 @@
+letra = input("Digite F ou M: ")
+
+if letra == "f" or letra == "F":
+    print("Feminino")
+elif letra == "m" or letra == "M":
+    print("Masculino")
+else:
+    print("Sexo Inválido")
