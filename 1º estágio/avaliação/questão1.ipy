@@ -1,0 +1,17 @@
+# 1. Receber o salário atual
+
+salario_atual = float(input("Digite o salário atual: "))
+
+# 2. Verificar a faixa salarial e definir a porcentagem de aumento
+if salario_atual < 500.00:
+    reajuste = 0.15  # 15%
+elif salario_atual <= 1000.00:
+    reajuste = 0.10  # 10%
+else:
+    reajuste = 0.05  # 5% (Acima de 1000)
+
+# 3. Calcular o novo salário
+novo_salario = salario_atual * (1 + reajuste)
+
+# 4. resultado
+print(f"Novo salário reajustado: R$ {novo_salario:.2f}")
