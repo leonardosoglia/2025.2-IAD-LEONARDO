@@ -1,0 +1,6 @@
+>> t = [a, b, c]
+>>> x = t.pop("b")
+>>> print(t)
+[a, c]
+>>> print(x)
+b

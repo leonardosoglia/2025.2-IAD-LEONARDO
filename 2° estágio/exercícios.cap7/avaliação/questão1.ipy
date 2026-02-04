@@ -1,0 +1,23 @@
+soma = 0
+quantidade = 0
+
+while True:
+    entrada = input("Digite um número ou 'pronto' para finalizar: ")
+
+    if entrada.lower() == "pronto":
+        break
+
+    try:
+        numero = float(entrada)
+        soma += numero
+        quantidade += 1
+    except:
+        print("Erro: entrada inválida. Digite um número ou 'pronto'.")
+
+if quantidade > 0:
+    media = soma / quantidade
+    print("Soma total:", soma)
+    print("Quantidade de números:", quantidade)
+    print("Média:", media)
+else:
+    print("Nenhum número válido foi digitado.")

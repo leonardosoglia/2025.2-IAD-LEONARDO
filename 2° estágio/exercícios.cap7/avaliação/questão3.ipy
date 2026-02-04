@@ -1,0 +1,23 @@
+fname = input("Digite o nome de um arquivo: ")
+
+try:
+    fhand = open(fname)
+except:
+    print("Arquivo não pode ser aberto:", fname)
+    quit()
+
+total = 0
+count = 0
+
+for line in fhand:
+    if line.startswith("X-DSPAM-Confidence:"):
+        pos = line.find(":")
+        number = float(line[pos+1:].strip())
+        total += number
+        count += 1
+
+if count > 0:
+    media = total / count
+    print("Média de confiança de spam:", media)
+else:
+    print("Nenhuma linha encontrada.")

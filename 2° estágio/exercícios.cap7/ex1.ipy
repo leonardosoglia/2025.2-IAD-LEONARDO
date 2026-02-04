@@ -1,0 +1,18 @@
+# Solicita ao usuário o nome do arquivo
+nome_arquivo = input("Digite o nome de um arquivo: ")
+
+try:
+    # Tenta abrir o arquivo para leitura
+    arquivo = open(nome_arquivo)
+except:
+    # Se o arquivo não for encontrado, avisa e encerra
+    print("Arquivo não encontrado:", nome_arquivo)
+    exit()
+
+# Loop para ler o arquivo linha por linha
+for linha in arquivo:
+    # Remove espaços em branco e a quebra de linha (\n) do final
+    linha = linha.rstrip()
+    
+    # Imprime a linha convertida para maiúsculas
+    print(linha.upper())

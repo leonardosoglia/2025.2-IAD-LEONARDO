@@ -1,0 +1,20 @@
+fname = input("Digite o nome do arquivo: ")
+
+try:
+    fhand = open(fname)
+except:
+    print("Arquivo não pode ser aberto:", fname)
+    quit()
+
+palavras = []
+
+for line in fhand:
+    line = line.rstrip()
+    lista = line.split()
+
+    for palavra in lista:
+        if palavra not in palavras:
+            palavras.append(palavra)
+
+palavras.sort()
+print(palavras)
