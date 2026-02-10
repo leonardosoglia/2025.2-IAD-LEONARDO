@@ -1,0 +1,13 @@
+import re
+
+arquivo = input("Digite o nome do arquivo: ")
+expressao = input("Digite uma expressão regular: ")
+
+contador = 0
+
+with open(arquivo, "r", encoding="utf-8") as f:
+    for linha in f:
+        if re.search(expressao, linha):
+            contador += 1
+
+print(f"{arquivo} tem {contador} linhas que se igualam a '{expressao}'")

@@ -1,0 +1,18 @@
+import re
+
+arquivo = input("Digite o nome do arquivo: ")
+
+numeros = []
+
+with open(arquivo, "r", encoding="utf-8") as f:
+    for linha in f:
+        linha = linha.strip()
+        x = re.findall(r"^Nova Revisão: ([0-9]+)", linha)
+        if x:
+            numeros.append(int(x[0]))
+
+if numeros:
+    media = sum(numeros) / len(numeros)
+    print(int(sum(numeros)), round(media, 6))
+else:
+    print("Nenhum número encontrado")
